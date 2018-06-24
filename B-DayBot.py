@@ -11,7 +11,7 @@ REPLY_MESSAGES = ["Happy cake day /u/{}! 🍰",
 
 def authenticate():
     print("Authenticating...")
-    reddit = praw.Reddit("B-DayBot", user_agent="B-DayBot v1.0 (by /u/LukeAlSaba)")
+    reddit = praw.Reddit("B-DayBot", user_agent="Birthday Bot v1.0 (by /u/LukeAlSaba)")
     return reddit
 
 
