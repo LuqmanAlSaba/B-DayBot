@@ -27,7 +27,7 @@ def run_bot(reddit, congratulated_users):
     current_date = datetime.datetime.today().strftime('%m/%d')
 
     print("Getting comments...")
-    for comment in reddit.subreddit("WholesomeMemes+MadeMeSmile+RandomKindness+Python").comments(limit=75):
+    for comment in reddit.subreddit("WholesomeMemes+MadeMeSmile+RandomKindness+Python").comments(limit=100):
 
         user_birthday = datetime.datetime.fromtimestamp(int(comment.author.created)).strftime('%m/%d')
 
