@@ -5,8 +5,7 @@ import random
 REPLY_MESSAGES = ["Happy cake day /u/{}! 🍰",
                   "Hope you have a nice cake day /u/{}! 🎂",
                   "It's your cake day /u/{}! Congrats! 🎉",
-                  "Happy Reddit birthday /u/{}! 🙂",
-                  "Happy cake day /u/{}! [Here's some cake!](http://gph.is/1WDTNoY)"]
+                  "Happy Reddit birthday /u/{}! 🙂"]
 
 
 def authenticate():
