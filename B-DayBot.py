@@ -33,11 +33,11 @@ def run_bot(reddit, congratulated_users):
         print("Checking...")
         if current_date == user_birthday and comment.author not in congratulated_users:
             print("Cake day found!")
-            # comment.reply(random.choice(REPLY_MESSAGES).format(comment.author)).clear_vote()
-            #
-            # congratulated_users.append(comment.author)
-            # with open("congratulated_users.txt", "a") as file:
-            #     file.write("{}\n".format(comment.author.name))
+            comment.reply(random.choice(REPLY_MESSAGES).format(comment.author)).clear_vote()
+
+            congratulated_users.append(comment.author)
+            with open("congratulated_users.txt", "a") as file:
+                file.write("{}\n".format(comment.author.name))
 
 
 def get_congratulated_users():
