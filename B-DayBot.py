@@ -23,15 +23,17 @@ def main():
 
 
 def run_bot(reddit, congratulated_users):
-    current_date = datetime.datetime.today().strftime('%m/%d')
+    current_date = datetime.datetime.today().strftime('%y/%m/%d')
 
     print("Getting comments...")
     for comment in reddit.subreddit("WholesomeMemes+MadeMeSmile+RandomKindness").comments(limit=100):
 
-        user_birthday = datetime.datetime.fromtimestamp(int(comment.author.created)).strftime('%m/%d')
+        account_created_date = datetime.datetime.fromtimestamp(int(comment.author.created)).strftime('%y/%m/%d')
 
         print("Checking...")
-        if current_date == user_birthday and comment.author not in congratulated_users:
+        if current_date != account_created_date \
+                and current_date[3:] == account_created_date[3:] \
+                and comment.author not in congratulated_users:
             print("Cake day found!")
             comment.reply(random.choice(REPLY_MESSAGES).format(comment.author)).clear_vote()
 
