@@ -2,10 +2,10 @@ import praw
 import datetime
 import random
 
-REPLY_MESSAGES = ["Happy cake day {}! 🍰",
-                  "Hope you have a nice cake day {}! 🎂",
-                  "It's your cake day {}! Congrats! 🎉",
-                  "Happy Reddit birthday {}! 🙂"]
+REPLY_MESSAGES = ["Happy cake day /u/{}! 🍰",
+                  "Hope you have a nice cake day /u/{}! 🎂",
+                  "It's your cake day /u/{}! Congrats! 🎉",
+                  "Happy Reddit birthday /u/{}! 🙂"]
 
 
 def authenticate():
