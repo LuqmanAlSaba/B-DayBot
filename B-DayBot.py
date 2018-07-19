@@ -49,9 +49,10 @@ def get_congratulated_users():
 
 def remove_downvoted_comments(reddit):
     print("Checking for comments with negative karma")
-    for comment in reddit.redditor("B-DayBot").comments.new(limit=None):
+
+    for comment in reddit.redditor("B-DayBot").comments.new(limit=25):
         print("Comment Score: {}".format(comment.score))
-        if comment.score < 0:
+        if comment.score <= 0:
             print("Deleting comment...")
             comment.delete()
 
