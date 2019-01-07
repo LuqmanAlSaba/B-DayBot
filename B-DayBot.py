@@ -26,7 +26,7 @@ def run_bot(reddit, congratulated_users):
     current_date = datetime.datetime.today().strftime('%y/%m/%d')
 
     print("Getting comments...")
-    for comment in reddit.subreddit("RandomKindness").comments(limit=100):
+    for comment in reddit.subreddit("RandomKindness+happy+UpliftingNews").comments(limit=100):
 
         account_created_date = datetime.datetime.fromtimestamp(int(comment.author.created)).strftime('%y/%m/%d')
 
